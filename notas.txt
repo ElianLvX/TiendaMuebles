@@ -1,0 +1,79 @@
+*******Notas**********
+
+---> Flex-box
+
+Orientaciones : Row, column, colum-reverse, row-reverse 
+
+Row : cuando estamos en orientacion modo row(fila) alineamos las cosas con 
+      justify-content sus propiedades son:
+      -center
+      -flex-star
+      -flex-end
+      -space-between
+      -space-around
+      -space-evenly
+
+
+Column: Cundo estamos en orientacion colum(columna) alinearemos las cosas con
+        aling-items sus propiedades son:
+        -center
+        -flex-star
+        -flex-end
+        -baseline
+
+===> Grid
+
+Orientacion: En grid podemos hacer uso de column y row al mismo tiempo
+             con grid-template-columns, grid-template-Row
+
+        los atributos comparten algunos por ejemplo en Grid se re comuenda utilizar el fr es decir
+        si quiero acomodar 3 enlaces en 3 columnas usare los siguente:
+        grid-template-columns: 200px 200px 200px 20px;
+
+        Por que pongo 4 si 3 enlances que acomodar. Se debe a las lineas de cada final de columna
+        como se puede observar: 
+        |           |           |          |
+        |    img    |    img    |   img    |
+        |           |           |          |
+
+        Pero como podemos observar se esta repitiendo mucho los 200px lo que se puede hacer 
+        es usar una propiedad llamada repeat() que recibe dos valores cuantas veces se repite y
+        la medida o la fraccion(fr) quedaria de la siguente manera usando fr quedaria de la musma manera
+        usando los px:
+
+        grid-template-columns: repeat(4, 1fr);
+
+        Propiedade de Grid en css:
+        Nota: Grid se coloca en el padre de los elementos a ordenar
+        -display: grid; ("Para acceder a las propiedades de Grid");
+        -gap : 1rem; (Separacion entre columnas y filas clase padre)
+            colum-gap: 1rem; (Separacion entre columnas);
+            row-gap: 1rem; (Separacion entre Filas);
+        -grid-teplate-column: repeat(2, 1fr); (Sirve para crear columnas este elemento va en la clase padre);
+        -grid-template-row: repeat(2, 1fr); (Sirve para crear filas va en la clase padre)
+      
+        (Clase Hija)
+        Usando la ayuda de FireFox Developer Editio o google chrome la opcion de gri podemos ver las 
+        columnas y asi ubicarlas.
+
+        grid-column: 1 / 3; (Este acomodara lo que necesites de la columna 1 a la linea 3 OJO) Opcion 1 Mejor la neta
+            grid-column-start: 1; (iniciara de la linea 1); Opcion 2
+            grid-row-end: 3; (Terminara de la linea 3); Opcion 2
+
+        
+
+
+----> Unidades de medida en css
+      - Unidades de Medida Absolutas: son las que son exactas, como pueden ser centimetros o pixeles.
+      Son : Cm y Px.
+
+      -Unidades de Medida relativas: Toman su valor en bace a otros elementos.
+      Tienen la ventaja de que se adaptan mejor a diferentes resoluciones y densidades
+      de pixeles, lo cual lo hace mejor opcion para la gran cantidad de dispositivos que 
+      utilizan los usuarios para navegar.
+      Son: em, rem, vh, vw y porcentajes.
+
+      El html tiene una tamaño de fuente por default de 16px.
+
+----> Formas de Escribir Codigo Css
+      Existen diferentes: modulos, Bem, Utilidades, Smacss

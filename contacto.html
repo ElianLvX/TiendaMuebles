@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ecomerce - Contacto</title>
+</head>
+<body>
+    
+    <header>
+        <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
+    </header>s
+
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a class="enlace" href="index.html">Inicio</a>
+            <a class="enlace" href="nosotros.html">Nosotros</a> 
+            <a class="enlace" href="tienda.html">Tienda</a>
+            <a class="enlace" href="blog.html">Blog</a>
+            <a class="enlace" href="galeria.html">Galeria</a>
+            <a class="enlace" href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <main class="contenido-principal contenedor">
+        <h2 class="text-center"> Contacto</h2>
+        <!-- Atributos del Input value:"" le asigna un texto por default al input se puede modificar
+        con readonly bloqueas el input y ya nadie lo puede editar
+        -->
+
+        <form class="formulario">
+            <!-- * Aqui creamos los inputs -->
+            <fieldset> <!-- Crea Un marco con todo lo que contenga -->
+                <legend>Tus Datos</legend> <!-- Nos Crea un titulo en el fieldset --> 
+
+                <div class="campo"><!-- Devido a que el div tiene un Display de Block se acomodan uno arriba del otro-->
+                    <label for="nombre"> Nombre: </label> <!-- El atrito for nos manda o resalta nuestro input que tenga el mismo id -->
+                    <input id="nombre" type="text" placeholder="Tu Nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="asunto"> Asunto: </label>
+                    <input id="asunto" type="text" placeholder="Tu Asunto" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email"> Correo: </label>
+                    <input id="email" type="email" placeholder="Tu Correo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="tel"> Telefono: </label>
+                    <input id="tel" type="tel" placeholder="Tu Telefono" required>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha"> Fecha: </label>
+                    <input id="fecha" type="date" placeholder="Fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje"> Mensaje: </label>
+                    <textarea cols="20" rows="10"></textarea> <!-- El atributo value aqui no sirve se tiene que escribir dentro del text Area -->
+                </div>
+
+            </fieldset> <!-- Fin de tus datos -->
+
+            <fieldset>
+                <!-- * Aqui creamos una Lista de Tipo Input -->
+                <legend>Pais</legend>
+
+                <div class="campo">
+                    <label for="pais"> Pais: </label>
+
+                    <!-- Atributos de los Options
+                    podemos desabilitar una opcion usando "disabled"
+                    podemos tener una opcion predeterminada con "select"
+                    podemos darle un valor a una opcion poniendo "value="" " cuando se usa un lneguaje de programacion este valor se ele enviara al back-end
+                    -->                    
+                    <select id="pais"> <!-- Select es el contenedor -->
+                        <option disabled selected> --- Seleccione --- </option>
+                        <option value="MX"> Mexico </option> <!-- estas son las opciones que guarda select -->
+                        <option value="AR"> Argentina </option>
+                        <option value="CO"> Colombia </option>
+                        <option value="CL"> Chile </option>
+                    </select>
+
+                </div>
+
+            </fieldset> <!-- Fin de Pais -->
+
+            <fieldset>
+                <!-- Informacion Radio Button -->
+                <!-- * Para poder usarlo colocamos en type "radio"
+                * debido a que utilizaremos mas de uno le colocamos el atributo "name"
+                * a el input a todos los elementos que tengan el type="radio" para que al hora
+                * de seleccionar uno se desamarque el otro
+                -->
+
+                <!-- ? Existen otro Tipos como: checkbox (da igual si tienen el atributo name en el input)-->
+                <!-- ! al igual que los demas inputs lo que se le envia al back-end seria el atributo value que va en el input -->
+                <!-- Firefox No lo soporta 19/08/22-->
+                <legend>Información Extra</legend>
+
+                <div class="campo">
+                    <label for="cliente">Cliente</label>
+                    <input id="cliente" type="radio" name="tipo" value="cliente">
+                </div>
+
+                <div class="campo">
+                    <label for="provedor">Provedor</label>
+                    <input id="provedor" type="radio" name="tipo" value="cliente">
+                </div>
+
+                <div class="campo">
+                    <label for="categoria"> Categoria de Interes </label>
+                    <input list="categorias" name="categorias">
+                    <datalist id="categorias">
+                        <option value="Cocina">
+                        <option value="Exterior">
+                        <option value="Recamaras">
+                        <option value="Oficina">
+                        <option value="Televisión">
+                    </datalist>
+                </div>
+
+            </fieldset>
+            <input class="btn" type="submit" value="Enviar">
+        </form>
+    </main>
+    
+    <footer>
+        <div class="footerX contenedor">
+            <div>
+                <h3>Categorias</h3>
+                <nav class="EnlaceX">
+                    <a href="#">Cocina</a>
+                    <a href="#">Oficina</a>
+                    <a href="#">Jardin</a>
+                    <a href="#">Cochera</a>
+                    <a href="#">Domitorios</a>
+                </nav>
+            </div>
+    
+            <div>
+                <h3>Sobre Nosotros</h3>
+                <nav class="Tamaño">
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Mision, Vision y Valores</a>
+                    <a href="#">Carrasa</a>
+                    <a href="#">Polita de Privacidad</a>
+                    <a href="#">Terminos de Servicio</a>
+                </nav>
+            </div>
+    
+            <div>
+                <h3>Soporte</h3>
+                <nav class="EnlaceX">
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en Linea</a>
+                    <a href="#">Confianza y Seguridad</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <p class="text-center padding4">Todos los Derechos Reservaodos lvEr</p>
+    <script src="script.js"></script>
+</body>
+</html>
